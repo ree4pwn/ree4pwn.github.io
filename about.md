@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
++ 热爱逆向
++ 由于工作原因不得不转项渗透
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[ree4pwn@outlook.com](mailto:ree4pwn@outlook.com)
