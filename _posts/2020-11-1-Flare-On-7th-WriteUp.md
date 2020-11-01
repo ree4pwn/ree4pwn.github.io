@@ -75,9 +75,13 @@ patch位置如下，全部`nop`
               v17 = incrSeqV3(*(int **)(v24 + 252), (int)&NTI__pxbIse2JUQkJU0n9blV9bY5g_);
 ```
 
-方
+那么将以下跳转改为`jmp`即可强制判断每次都正确。
 
 ```asm
 .text:00432356                 cmp     edx, eax
 .text:00432358                 jz      loc_432261
 ```
+
+最终分数为296后，得到flag
+
+![]()
