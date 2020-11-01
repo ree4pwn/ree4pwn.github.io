@@ -5,7 +5,19 @@ title: 2020 Flare-On 7th Write up
 
 由于在我开始做题目时比赛仅剩一周，导致没有在比赛期间完成所有的题目，现将其补完。
 
-## Ch1
+## Ch1 Fidle
+
+给出了源码，关键代码如下
+
+![](../images/flareon5)
+
+通过该函数计算出token，将值传入
+
+![](../images/flareon6)
+
+所以我们只需要出入一个`[target_amout-2**20, target_amount+2**20]`之间的数即可，token值为1030，得到flag
+
+![](../images/flareon7)
 
 ## Ch3 Wednesday
 
