@@ -52,15 +52,17 @@ patch位置如下，全部`nop`
 .text:00433FD7                 jmp     loc_433D62
 ```
 
-![patch1](../images/2020-11-1-Flare-On-7th-WriteUp/path1.png)
+![1](../images/flareon2.png)
 
 但是游戏运行到胜利分数`296`时，程序缺直接崩溃，没有将flag打印出来。猜测是应为flag是根据每一个石块的上下跳跃是否正确来作为输入，如果直接nop，会产生不正确的输入，需要将每一个石块都判断为对。
 
 回到`resetEverything__Q1G0gjmnsnF8mVSgZnKS4w_3`中，发现符号名`score__h34o6jaI3AO6iOQqLKaqhw`的变量，该变量用来存储分数，查看交叉引用
 
-![]()
+![2](../images/flareon3.png)
 
 存在函数名为`onCollide__9byAjE9cSmbSbow3F9cTFQfLg`函数，推测为发生碰撞的处理函数（事实上发生石块上下均有碰撞体积，按F10可以看到），其中对`score__h34o6jaI3AO6iOQqLKaqhw`的处理可以明显看到如果判断正确则分数加1。
+
+![f10](../images/flareon4.png)
 
 ```c
             if ( *(char *)(v3 + 248) == *(unsigned __int8 *)(v24 + 248) )
@@ -84,4 +86,4 @@ patch位置如下，全部`nop`
 
 最终分数为296后，得到flag
 
-![]()
+![2](../images/flareon1.png)
