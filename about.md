@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-+ 热爱逆向
-+ 由于工作原因不得不转项渗透
++ 逆向/渗透工程师
 
 ### Contact me
 
