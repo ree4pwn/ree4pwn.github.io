@@ -110,21 +110,7 @@ patch位置如下，全部`nop`
 
 `alt+f11`进入vba的调试界面，得到如下代码
 
-```
-Private Declare Function InternetGetConnectedState Lib "wininet.dll" _
-(ByRef dwflags As Long, ByVal dwReserved As Long) As Long
-
-Private Declare PtrSafe Function mciSendString Lib "winmm.dll" Alias _
-   "mciSendStringA" (ByVal lpstrCommand As String, ByVal _
-   lpstrReturnString As Any, ByVal uReturnLength As Long, ByVal _
-   hwndCallback As Long) As Long
-
-Private Declare Function GetShortPathName Lib "kernel32" Alias "GetShortPathNameA" _
-    (ByVal lpszLongPath As String, ByVal lpszShortPath As String, ByVal lBuffer As Long) As Long
-
-Public Function GetInternetConnectedState() As Boolean
-  GetInternetConnectedState = InternetGetConnectedState(0&, 0&)
-End Function
+```vbs
 
 Function rigmarole(es As String) As String
     Dim furphy As String
