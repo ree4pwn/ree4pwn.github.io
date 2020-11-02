@@ -198,4 +198,14 @@ End Function
 
 ![](../images/flareon9.png)
 
-以上vba代码可以用[oletools](https://github.com/decalage2/oletools)dump出来。注意到以上代码的主要逻辑由`folderol()`函数完成，向
+以上vba代码可以用[oletools](https://github.com/decalage2/oletools)dump出来。注意到以上代码的主要逻辑由`folderol()`函数完成，结合解码函数`rigmarole()`与`canoodle()`，向特定路径下生成了一个mp3文件。
+
+![10](../images/flareon10.png)
+
+名字为pcode，播放了一段鼓点似的音乐...这里实在没有想到
+
+于是将目光专向pcode，根据[offical-wp](https://www.fireeye.com/content/dam/fireeye-www/blog/pdfs/flareon7-challenge4-solution.pdf)，我们使用[pcode2code](https://pypi.org/project/pcode2code/)可以发现少许的不同
+
+![](../images/flareon11.png)
+
+dump出的代码多了一些功能，将`F.T`后偏移一定字节的数据解码后写入png文件中，于是
