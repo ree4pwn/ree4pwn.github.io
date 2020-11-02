@@ -110,7 +110,7 @@ patch位置如下，全部`nop`
 
 `alt+f11`进入vba的调试界面，得到如下代码
 
-```vbs
+```
 Private Declare Function InternetGetConnectedState Lib "wininet.dll" _
 (ByRef dwflags As Long, ByVal dwReserved As Long) As Long
 
