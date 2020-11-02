@@ -198,4 +198,4 @@ End Function
 
 ![](../images/flareon9.png)
 
-以上vba代码可以用[oletools](https://github.com/decalage2/oletools)dump出来。注意到以上代码
+以上vba代码可以用[oletools](https://github.com/decalage2/oletools)dump出来。注意到以上代码的主要逻辑由`folderol()`函数完成，向
