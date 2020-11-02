@@ -208,4 +208,8 @@ End Function
 
 ![](../images/flareon11.png)
 
-dump出的代码多了一些功能，将`F.T`后偏移一定字节的数据解码后写入png文件中，于是
+dump出的代码多了一些功能，将`F.T`后偏移一定字节的数据解码后写入png文件中，于是将该png抠出来
+
+![](../images/flareon12.png)
+
+得到flag
