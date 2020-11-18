@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [BugBounty]GraphQL
+title: BugBounty-GraphQL
 ---
 
 ## 攻击面
