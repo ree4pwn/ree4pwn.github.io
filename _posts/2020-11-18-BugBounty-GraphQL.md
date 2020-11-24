@@ -20,6 +20,25 @@ title: BugBounty-GraphQL
 
 ![](../images/bugDB_v1_2.png)
 
+### hackone101 BugDB v2
+
+考点是`Mutation`的使用
+
+需要将`victim`用户的`Bugs`的`privite`属性设置为`false`
+
+```
+mutation {
+  modifyBug(id: 2, private: false) {
+    ok
+    bug {
+      id
+    }
+  }
+}
+```
+
+### hackone101 BugDB v3
+
 ## 漏洞报告
 
 ## template
