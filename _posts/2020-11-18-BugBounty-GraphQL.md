@@ -6,6 +6,16 @@ title: BugBounty-GraphQL
 * TOC
 {:toc}
 
+## 前置知识
+
+官方文档
+
++ [https://graphql.cn/](https://graphql.cn/learn/queries/#mutations)
+
+分析工具
+
++ [chrome插件版Graphiql](https://chrome.google.com/webstore/detail/graphiql-extension/jhbedfdjpmemmbghfecnaeeiokonjclb?hl=en)
+
 ## 攻击面
 
 ## CTF
