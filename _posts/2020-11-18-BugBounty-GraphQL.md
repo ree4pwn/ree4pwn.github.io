@@ -71,13 +71,13 @@ mutation {
 得到的文件名是一串随即数
 
 ```
-                          "node": {
-                            "id": "QXR0YWNobWVudHM6MQ==",
-                            "bugId": 1,
-                            "filename": "a13f22a17a0b6c38ec973e42dc80b608",
-                            "bug": {
-                              "id": "QnVnczox"
-                            }
+"node": {
+  "id": "QXR0YWNobWVudHM6MQ==",
+  "bugId": 1,
+  "filename": "a13f22a17a0b6c38ec973e42dc80b608",
+  "bug": {
+    "id": "QnVnczox"
+  }
 ```
 
 修改文件名
@@ -88,13 +88,13 @@ mutation {
 修改文件名后得到的文件名成为可控值
 
 ```
-                          "node": {
-                            "id": "QXR0YWNobWVudHM6MQ==",
-                            "bugId": 1,
-                            "filename": "test1.txt",
-                            "bug": {
-                              "id": "QnVnczox"
-                            }
+"node": {
+  "id": "QXR0YWNobWVudHM6MQ==",
+  "bugId": 1,
+  "filename": "test1.txt",
+  "bug": {
+    "id": "QnVnczox"
+  }
 ```
 
 到这里我就卡住了，然后参考了别人的wp
