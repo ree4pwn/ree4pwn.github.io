@@ -136,3 +136,4 @@ from sqlalchemy import create_engine from sqlalchemy.ext.declarative import decl
 ## 参考资料
 
 + [攻击GraphQL](https://xzfile.aliyuncs.com/upload/zcon/2018/7_%E6%94%BB%E5%87%BBGraphQL_phithon.pdf)
++ [GraphQL injection](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
