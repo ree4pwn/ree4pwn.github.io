@@ -25,6 +25,9 @@ title: BugBounty-GraphQL
 
 ## 攻击面
 
++ 不正确的权限配置GraphQL接口
++ GraphQL注入，工具[GraphMap](https://github.com/swisskyrepo/GraphQLmap)
+
 ## CTF
 
 ### hackone101 BugDB v1
@@ -131,7 +134,12 @@ from sqlalchemy import create_engine from sqlalchemy.ext.declarative import decl
 
 ## 漏洞报告
 
-## template
++ [https://hackerone.com/reports/885539]([twitter]Private list members disclosure via GraphQL)graphql接口的泄漏与侧信道攻击结合，判断List ID是否存在以获取private list ID。
++ [https://hackerone.com/reports/980511]([shopify]A staff member with no permissions can edit Store Customer Email)graphql权限配置不严导致用户信息修改
+
+## Template/Fuzzer
+
++ nuclei包含的很多可能的路径，事实上类似api接口路径，每个企业都有不同的命名习惯[nuclei-templates/technologies/graphql.yaml](https://github.com/projectdiscovery/nuclei-templates/blob/5a3a1134f94765694aea1484f0a98e4795f550d6/technologies/graphql.yaml)
 
 ## 参考资料
 
