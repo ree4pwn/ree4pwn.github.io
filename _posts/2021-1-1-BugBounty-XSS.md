@@ -24,6 +24,11 @@ title: BugBounty-XSS
 
 ## Template/Fuzzer
 
+## 缓解措施
+
+owasp的[cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)列出了多种缓解措施，事实上无论是CTF还是实战，都是围绕此类缓解措施进行绕过。
+
 ## 参考资料
 
-[Vulnerability DB](https://snyk.io/vuln/)
++ [Vulnerability DB](https://snyk.io/vuln/)
++ [通过混淆命名空间绕过DOMPurify实现XSS](https://www.anquanke.com/post/id/219089#h2-4)
