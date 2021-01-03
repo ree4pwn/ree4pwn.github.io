@@ -18,6 +18,9 @@ title: BugBounty-XSS
 
 ## 攻击面
 
++ 邮箱类服务的XSS导致邮件泄漏
++ Electron的桌面软件导致RCE
+
 ## CTF
 
 ## 漏洞报告
