@@ -27,13 +27,18 @@ title: BugBounty-XSS
 
 参考资料
 
++ [【技术分享】奇淫技巧：看我如何将XSS转化成了RCE](https://www.anquanke.com/post/id/86592)
 + [Modern Alchemy: Turning XSS into RCE](https://blog.doyensec.com/2017/08/03/electron-framework-security.html)
 + [Electron Security Checklist](https://www.blackhat.com/docs/us-17/thursday/us-17-Carettoni-Electronegativity-A-Study-Of-Electron-Security-wp.pdf)
 + [Electron hack —— 跨平台 XSS](https://paper.seebug.org/370/)
++ [Awesome Electron.js hacking & pentesting resources](https://github.com/doyensec/awesome-electronjs-hacking)
++ [Electron程序开启DevTools](https://rce.today/posts/Electron%E5%BC%80%E5%90%AFDevTools/)
 
 ## CTF
 
 ## 漏洞报告
+
++ [Another XSS in Google Colaboratory](https://blog.bentkowski.info/2018/09/another-xss-in-google-colaboratory.html?view=sidebar)
 
 ## Template/Fuzzer
 
