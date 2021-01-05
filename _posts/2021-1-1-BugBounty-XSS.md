@@ -21,6 +21,16 @@ title: BugBounty-XSS
 + 邮箱类服务的XSS导致邮件泄漏
 + Electron的桌面软件导致RCE
 
+### Electron
+
+鉴于Electron内的XSS可能导致RCE，所以单独列为一类
+
+参考资料
+
++ [Modern Alchemy: Turning XSS into RCE](https://blog.doyensec.com/2017/08/03/electron-framework-security.html)
++ [Electron Security Checklist](https://www.blackhat.com/docs/us-17/thursday/us-17-Carettoni-Electronegativity-A-Study-Of-Electron-Security-wp.pdf)
++ [Electron hack —— 跨平台 XSS](https://paper.seebug.org/370/)
+
 ## CTF
 
 ## 漏洞报告
@@ -35,3 +45,4 @@ owasp的[cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_S
 
 + [Vulnerability DB](https://snyk.io/vuln/)
 + [通过混淆命名空间绕过DOMPurify实现XSS](https://www.anquanke.com/post/id/219089#h2-4)
++ [Cross-site scripting (XSS) cheat sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
