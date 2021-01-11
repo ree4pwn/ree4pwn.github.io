@@ -52,3 +52,5 @@ owasp的[cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_S
 + [通过混淆命名空间绕过DOMPurify实现XSS](https://www.anquanke.com/post/id/219089#h2-4)
 + [Cross-site scripting (XSS) cheat sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 + [XSS Filter Evasion Cheat Sheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheetx)
++ [https://public-firing-range.appspot.com/](https://public-firing-range.appspot.com/)
++ [LiveDOM++](https://livedom.lab.xss.academy/)
